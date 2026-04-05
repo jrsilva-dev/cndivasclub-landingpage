@@ -2,8 +2,8 @@
 <html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>CN Divas Club | Estética Feminina</title>
 
@@ -11,11 +11,11 @@
     <script src="assets/js/tailwind-config.js"></script>
 
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&family=Manrope&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
-<body class="bg-surface text-on-surface selection:bg-secondary-container" id="inicio">
+<body class="bg-surface text-on-surface selection:bg-secondary-container">
     <nav
         class="fixed top-0 w-full z-50 bg-[#fafaf5]/80 dark:bg-[#322214]/80 backdrop-blur-md border-b border-gold-accent/10">
         <div class="flex justify-between items-center px-8 py-6 max-w-screen-2xl mx-auto">
@@ -23,11 +23,13 @@
                 <img src="assets/images/logomarca_cn.png" alt="CN Divas Club" class="h-10 w-auto object-contain">
             </a>
             <div class="hidden md:flex gap-10 items-center">
-                <a class="font-notoSerif tracking-tight text-lg text-[#775a19] border-b-2 border-[#D4AF37] pb-1 transition-colors duration-500"
+                <a class="nav-link font-notoSerif tracking-tight text-lg text-[#4e453e] dark:text-[#d2c4bb] hover:text-[#D4AF37] border-b-2 border-transparent hover:border-[#D4AF37] pb-1 transition-all duration-500"
                     href="#inicio">Início</a>
-                <a class="font-notoSerif tracking-tight text-lg text-[#4e453e] dark:text-[#d2c4bb] hover:text-[#D4AF37] transition-colors duration-500"
+
+                <a class="nav-link font-notoSerif tracking-tight text-lg text-[#4e453e] dark:text-[#d2c4bb] hover:text-[#D4AF37] border-b-2 border-transparent hover:border-[#D4AF37] pb-1 transition-all duration-500"
                     href="#contatos">Contatos</a>
-                <a class="font-notoSerif tracking-tight text-lg text-[#4e453e] dark:text-[#d2c4bb] hover:text-[#D4AF37] transition-colors duration-500"
+
+                <a class="nav-link font-notoSerif tracking-tight text-lg text-[#4e453e] dark:text-[#d2c4bb] hover:text-[#D4AF37] border-b-2 border-transparent hover:border-[#D4AF37] pb-1 transition-all duration-500"
                     href="#galeria">Galeria</a>
             </div>
             <a href="https://wa.me/558487788019?text=Olá,%20gostaria%20de%20agendar%20um%20horário!" target="_blank"
@@ -37,7 +39,7 @@
         </div>
     </nav>
     <main>
-        <section class="relative min-h-screen flex items-center pt-20 px-8 overflow-hidden">
+        <section class="relative min-h-screen flex items-center pt-20 px-8 overflow-hidden reveal" id="inicio">
             <div class="absolute inset-0 z-0">
                 <img alt="Interior luxuoso do atelier"
                     class="w-full h-full object-cover opacity-35 grayscale contrast-125"
@@ -51,8 +53,8 @@
                     <h1 class="font-notoSerif text-5xl md:text-7xl text-primary leading-[1.1] tracking-tighter">Onde a
                         beleza e a <span class="text-gold-accent italic">sofisticação</span> se encontram</h1>
                     <p class="text-on-surface-variant text-lg max-w-md font-light leading-relaxed">
-                        Especialistas em extensão de cílios e cuidados exclusivos para a mulher moderna. Viva a
-                        experiência CN Divas.
+                        Especialista em extensão de cílios e cuidados exclusivos para a mulher moderna. Viva a
+                        experiência CN Divas Club.
                     </p>
                     <div class="flex flex-wrap gap-6 pt-4">
                         <a href="https://wa.me/558487788019?text=Olá,%20gostaria%20de%20agendar%20um%20horário!"
@@ -79,7 +81,7 @@
                 </div>
             </div>
         </section>
-        <section class="py-32 px-8 bg-surface-container-low" id="contatos">
+        <section class="py-32 px-8 bg-surface-container-low reveal" id="contatos">
             <div class="max-w-screen-2xl mx-auto">
                 <div class="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
                     <div class="max-w-xl">
@@ -151,7 +153,7 @@
             </div>
         </section>
 
-        <section class="py-32 px-8 bg-surface" id="galeria">
+        <section class="py-32 px-8 bg-surface reveal" id="galeria">
             <div class="max-w-4xl mx-auto text-center">
                 <span
                     class="text-gold-accent font-label font-semibold tracking-[0.3em] uppercase text-[10px] mb-8 block">Nossa
@@ -164,7 +166,7 @@
             </div>
         </section>
 
-        <section class="py-24 px-8 bg-surface" id="galeria-2">
+        <section class="py-24 px-8 bg-surface reveal" id="galeria-2">
             <div class="max-w-screen-2xl mx-auto">
                 <div class="grid grid-cols-1 md:grid-cols-12 md:grid-rows-2 gap-4 h-auto md:h-[800px]">
                     <div
@@ -201,16 +203,16 @@
             </div>
         </section>
 
-        <section class="py-40 px-8 bg-primary text-on-primary text-center relative overflow-hidden">
+        <section class="py-40 px-8 bg-primary text-on-primary text-center relative overflow-hidden reveal">
             <div
                 class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/natural-paper.png')] opacity-10">
             </div>
             <div class="relative z-10 max-w-2xl mx-auto">
                 <h2 class="font-notoSerif text-surface text-4xl md:text-6xl mb-12 tracking-tight">Sinta-se
                     poderosa.<br /><span class="italic text-gold-accent">Agende agora.</span></h2>
-                <a
-                    class="bg-surface text-primary px-12 py-5 rounded-lg font-bold text-lg hover:bg-gold-accent hover:text-white transition-all duration-500 shadow-2xl"
-                    href="https://api.whatsapp.com/send/?phone=558487788019&text=Ol%C3%A1%2C+gostaria+de+mais+informa%C3%A7%C3%B5es%21&type=phone_number&app_absent=0" target="_blank">
+                <a class="bg-surface text-primary px-12 py-5 rounded-lg font-bold text-lg hover:bg-gold-accent hover:text-white transition-all duration-500 shadow-2xl"
+                    href="https://api.whatsapp.com/send/?phone=558487788019&text=Ol%C3%A1%2C+gostaria+de+agendar+um%20horário%21&type=phone_number&app_absent=0"
+                    target="_blank">
                     Agendar Agora
                 </a>
             </div>
@@ -220,7 +222,9 @@
     <footer class="bg-[#f4f4ef] dark:bg-[#1a1c19] full-width py-16 px-8 border-t border-gold-accent/20">
         <div class="max-w-screen-2xl mx-auto">
             <div class="flex flex-col md:flex-row justify-between items-center gap-8 mb-12">
-                <div class="font-notoSerif text-2xl italic text-gold-accent font-bold">CN Divas Club</div>
+                <div class="font-notoSerif text-2xl italic text-gold-accent font-bold">
+                    <img src="assets/images/logomarca_cn.png" alt="CN Divas Club" class="h-12 w-auto object-contain">
+                </div>
 
                 <div class="flex flex-wrap justify-center gap-8">
 
@@ -256,7 +260,7 @@
                 <div class="font-manrope text-xs tracking-wide text-[#4e453e]/60">
                     © 2021 CN Divas Club todos os direitos reservados | Desenvolvido por <a
                         class="font-manrope text-xs tracking-wide text-[#4e453e]/60 hover:text-gold-accent transition-all"
-                        href="https://jrsilvadev-links.vercel.app/" target="_blank">Jr. Silva Dev</a>
+                        href="https://jrsilvadev-portfolio.vercel.app/" target="_blank">Jr. Silva Dev</a>
                 </div>
             </div>
         </div>
@@ -319,13 +323,11 @@
             <span class="material-symbols-outlined text-3xl">support_agent</span>
         </button>
 
-
-
         <div id="chatbot"></div>
 
 
         <script src="assets/js/script.js"></script>
-
+    </div>
 </body>
 
 </html>

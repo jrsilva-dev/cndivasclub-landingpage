@@ -1,3 +1,78 @@
+// scroll suave
+document.addEventListener("DOMContentLoaded", () => {
+  const links = document.querySelectorAll('a[href^="#"]');
+  
+  links.forEach(link => {
+    link.addEventListener("click", function (e) {
+      const id = this.getAttribute("href");
+      
+      if (id === "#" || !document.querySelector(id)) return;
+
+      e.preventDefault();
+      const target = document.querySelector(id);
+      const header = document.querySelector("nav");
+      const offset = header ? header.offsetHeight + 20 : 100;
+      const bodyRect = document.body.getBoundingClientRect().top;
+      const elementRect = target.getBoundingClientRect().top;
+      const elementPosition = elementRect - bodyRect;
+      const offsetPosition = elementPosition - offset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth"
+      });
+    });
+  });
+});
+
+// fade-in e fade-out
+document.addEventListener("DOMContentLoaded", () => {
+  const observerOptions = {
+    threshold: 0.15
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("active");
+      } else {
+        entry.target.classList.remove("active");
+      }
+    });
+  }, observerOptions);
+
+  const revealElements = document.querySelectorAll(".reveal");
+  revealElements.forEach((el) => observer.observe(el));
+});
+
+// animação do menu de navegação
+document.addEventListener("DOMContentLoaded", () => {
+    const navLinks = document.querySelectorAll('.nav-link');
+    const sections = document.querySelectorAll('section[id]');
+
+    const spyOptions = {
+        threshold: 0.6
+    };
+
+    const spyObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                navLinks.forEach(link => link.classList.remove('active'));
+                
+                const activeId = entry.target.getAttribute('id');
+                const activeLink = document.querySelector(`.nav-link[href="#${activeId}"]`);
+                
+                if (activeLink) {
+                    activeLink.classList.add('active');
+                }
+            }
+        });
+    }, spyOptions);
+
+    sections.forEach(section => spyObserver.observe(section));
+});
+
+// sessão do chatbot
 const chatWindow = document.getElementById("chat-window");
 
 function getBotResponse(message) {

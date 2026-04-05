@@ -1,5 +1,37 @@
+html {
+  scroll-behavior: smooth !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
 body {
+  overflow-x: hidden;
+  position: relative;
   font-family: 'Manrope', sans-serif;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.nav-link.active {
+    color: #775a19 !important; 
+    border-color: #D4AF37 !important;
+}
+
+.dark .nav-link.active {
+    color: #D4AF37 !important;
 }
 
 .font-notoSerif {
@@ -17,10 +49,6 @@ body {
   text-shadow: 0 0 15px rgba(212, 175, 55, 0.2);
 }
 
-
-html {
-  scroll-behavior: smooth;
-}
 
 /* Hover global */
 button, a {
