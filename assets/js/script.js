@@ -77,14 +77,18 @@ const chatWindow = document.getElementById("chat-window");
 
 function getBotResponse(message) {
   message = message.toLowerCase();
+  
+  if (message.includes("preço") || message.includes("valor") || message.includes("custo") || message.includes("valores"))
+    return "Para valores atualizados, o ideal seria falar direto pelo nosso WhatsApp. Posso te enviar o link?";
+
   if (message.includes("serviço"))
     return "Trabalhamos com extensão de cílios, manicure, pedicure e outros cuidados de beleza";
 
-  if (message.includes("preço") || message.includes("valor"))
-    return "Para valores atualizados, o ideal é falar direto no WhatsApp. Posso te enviar o link?";
-
   if (message.includes("agendar"))
     return "Você pode agendar seu horário de forma rápida pelo nosso WhatsApp!";
+
+  if (message.includes("obrigado") || message.includes("obrigada"))
+    return "Nós que agradecemos! Espero ter ajudado! Se tiver mais alguma dúvida, é só falar!";
 
   if (message.includes("local") || message.includes("onde"))
     return `Estamos em uma localização privilegiada. Veja no mapa 👇<br><br><a href="https://maps.app.goo.gl/2SZAcoUM2X5omhsG7" 
